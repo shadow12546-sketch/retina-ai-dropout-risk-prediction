@@ -1,0 +1,21 @@
+file_name,column_name,data_type,description
+complex_academic_data.csv,student_id,string,"Unique identifier for each student (e.g., STU00001)"
+complex_academic_data.csv,branch,categorical,"Engineering department (CSE, CSE-DS, IT, AIML, ECE, ME, CE)"
+complex_academic_data.csv,gender,categorical,"Student gender (M, F, Other)"
+complex_academic_data.csv,hostel_status,categorical,"Living arrangement (Hostel, Day Scholar)"
+complex_academic_data.csv,family_income,categorical,"Family income bracket (Low, Medium, High)"
+complex_academic_data.csv,parent_education,categorical,"Highest education level of parents (High School, Bachelors, Masters, PhD). Contains missing values (NaN)."
+complex_academic_data.csv,scholarship,binary,"1 = receives scholarship, 0 = no scholarship"
+complex_academic_data.csv,part_time_job,binary,"1 = has part-time job, 0 = no part-time job"
+complex_academic_data.csv,commute_time_mins,float,Estimated daily commute time in minutes. Contains missing values (NaN) to simulate messy data.
+complex_academic_data.csv,screen_time_hours,float,Estimated daily screen time in hours.
+complex_academic_data.csv,cgpa_sem1 ... cgpa_sem4,float,Semester-wise CGPA (0.0 to 10.0 scale).
+complex_academic_data.csv,backlogs_sem1 ... backlogs_sem3,int,Number of active backlogs accumulated per semester.
+complex_academic_data.csv,dropout_risk,int (Target),"Target variable for prediction. 0 = Low Risk, 1 = Medium Risk, 2 = High Risk."
+complex_attendance_series.csv,student_id,string,Foreign key mapping to complex_academic_data.csv
+complex_attendance_series.csv,semester,int,Semester number (1 to 4)
+complex_attendance_series.csv,week,int,Week number within the semester (1 to 8)
+complex_attendance_series.csv,subject,categorical,"Course subject type (Core_1, Core_2, Elective)"
+complex_attendance_series.csv,attendance_pct,float,Weekly attendance fraction for that subject (0.0 to 1.0). Contains random drops.
+complex_counsellor_notes.csv,student_id,string,Foreign key mapping to complex_academic_data.csv
+complex_counsellor_notes.csv,counsellor_note,string/text,"Unstructured text logging interactions, academic warnings, or personal challenges discussed with the counsellor."
